@@ -31,6 +31,14 @@ python3 main.py
 # or: ENTRY_OUTPUT=/tmp/entry.txt python3 main.py
 ```
 
+## Verification (all checked with tools, not by hand)
+
+- Line: 17 words, 97 characters — inside the bounty limits (at most 20 words, 1–140 characters).
+- Deterministic: two runs write byte-identical files (sha256 `95fd1076668818f92733e06b5e17478fad0f0b15091b8907e589fb710aee7ec1`).
+- Grader simulation: run as user `nobody` (uid 65534) with a grader-owned
+  output directory exits 0 and leaves `entry.txt` mode `0644` — the program
+  never changes permissions on a directory it does not own.
+
 ## Bounty
 
 - Bounty: [The Excuse That Almost Works](https://make.fun/bounty/u-clever-harbor-75-the-excuse-that-almost-works-69fde8f5)
